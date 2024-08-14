@@ -26,7 +26,7 @@ const CreateProduct = () => {
   })
 
   return (
-    <form className='card' onSubmit={prodEditForm.handleSubmit}>
+    <form className='card mt-5' onSubmit={prodEditForm.handleSubmit}>
       <div className="card-body">
         <h2>Edit Product</h2>
         <div className="mb-3">

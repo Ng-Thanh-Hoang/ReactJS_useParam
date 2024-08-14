@@ -68,13 +68,13 @@ const ListProduct = () => {
                             <td className='border-0 pt-4 fw-bold'>{item.type}</td>
                             <td className='text-end border-start-0 pt-4'>
                                 <NavLink to={`../update-product/${item.id}`} className="me-2 text-decoration-none fw-bold" style={{ color: '#f3601b' }}>Edit</NavLink>
-                                <button onClick={async (e) => {
+                                <span onClick={async (e) => {
                                     if (window.confirm('Bạn có muốn xoá không ?')) {
                                         const res = await axios.delete(`https://apitraining.cybersoft.edu.vn/api/ProductApi/delete/${item.id}`);
                                         getAllProductApi();
                                     }
-                                }} className='btn btn-primary'>Delete</button>
-                                <a href="#" className="me-2 text-decoration-none fw-bold px-1" style={{ borderLeft: '2px solid #f3601b', color: '#f3601b' }}>View detail</a>
+                                }} className="me-2 text-decoration-none fw-bold px-1" style={{ borderLeft: '2px solid #f3601b', color: '#f3601b',cursor:'pointer' }}>Delete</span>
+                                <NavLink to={`../view-detail/${item.id}`} className="me-2 text-decoration-none fw-bold px-1" style={{ borderLeft: '2px solid #f3601b', color: '#f3601b' }}>View detail</NavLink>
                             </td>
                         </tr>
                     })}

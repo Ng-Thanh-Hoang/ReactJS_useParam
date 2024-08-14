@@ -4,6 +4,7 @@ import Home from './component/Home';
 import ListProduct from './component/pages/ListProduct';
 import CreateProduct from './component/pages/CreateProduct';
 import UpdateProduct from './component/pages/UpdateProduct';
+import ViewDetail from './component/pages/ViewDetail';
 
 
 const App = () => {
@@ -15,6 +16,9 @@ const App = () => {
           <Route path='create-product' element={<CreateProduct />}></Route>
           <Route path='update-product'>
             <Route path=':id' element={<UpdateProduct />}></Route>
+          </Route>
+          <Route path='view-detail'>
+            <Route path=':id' element={<ViewDetail />}></Route>
           </Route>
         </Route>
       </Routes>
